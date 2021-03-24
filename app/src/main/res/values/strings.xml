@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">MealPassApp</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="google_key">AIzaSyD0VgB1uj8oOWIGYsHqJ840MnRaoI7kxT4</string>
+    <string name="loading">Loading</string>
+
+    <string name="title_activity_delivery_points_maps">Map</string>
+
+    <string-array name="food">
+        <item>Category</item>
+        <item>Pizza</item>
+        <item>Drinks</item>
+        <item>Tacos</item>
+        <item>Burger</item>
+        <item>Fries</item>
+        <item>Paratha Roll</item>
+        <item>Shwarma</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="pay">
+        <item>Select</item>
+        <item>easypaisa</item>
+        <item>jazzcash</item>
+        <item>UBL Bank Account</item>
+    </string-array>
+    <string-array name="type">
+        <item>Account Type</item>
+        <item>User</item>
+        <item>Food Seller</item>
+    </string-array>
+</resources>

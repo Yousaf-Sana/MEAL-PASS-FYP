@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F2F2">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtComment"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_margin="2dp"
+        android:layout_alignParentBottom="true"
+        android:textColorHint="#3A8CDF"
+        android:hint="Leave a comment"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate 0 to 5"
+        android:textColor="#696767"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_above="@+id/edtComment"
+        android:id="@+id/tvrating"/>
+    <SeekBar
+        android:id="@+id/seekbarRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tvrating"
+        android:layout_above="@+id/edtComment"
+        android:max="5"
+        android:progressTint="#00141414"
+        app:tickMark="@color/colorPrimary" />
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="Post"
+        android:ems="8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="6dp"
+        android:textSize="12sp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/circle_purple"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/noComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        android:layout_centerInParent="true"/>
+
+    <ListView
+        android:id="@+id/lvcomments"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="8dp"
+        android:layout_above="@+id/seekbarRating"
+        android:layout_marginRight="12dp"
+        android:layout_height="match_parent"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"/>
+
+    </RelativeLayout>

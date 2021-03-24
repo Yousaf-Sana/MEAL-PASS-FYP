@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fixBar"
+        android:background="#A770F6"
+        app:title="Add Item"
+        app:titleTextColor="#fff"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fixBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/imageviewset"
+                android:layout_width="135dp"
+                android:layout_marginTop="7dp"
+                android:layout_height="135dp"
+                android:layout_centerHorizontal="true"
+                app:civ_border="true"
+                app:civ_border_color="#5163CF"
+                app:civ_border_width="0.8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/add_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Item details"
+                android:layout_below="@+id/imageviewset"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ttv"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/ttv">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="@color/colorPurple"
+                    android:id="@+id/edt21">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Enter Food Name"
+                        android:id="@+id/title"
+                        android:textColor="#000" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt22"
+                    android:textColorHint="@color/colorPurple"
+                    android:layout_below="@+id/edt21">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Enter Price"
+                        android:textColor="#000"
+                        android:id="@+id/price"
+                        android:inputType="number"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="@color/colorPurple"
+                    android:id="@+id/edt23"
+                    android:layout_below="@+id/edt22">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Loyalty Points"
+                        android:inputType="number"
+                        android:id="@+id/edtPoints"
+                        android:textColor="#000" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edt24"
+                    android:textColorHint="@color/colorPurple"
+                    android:layout_below="@+id/edt23">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Discount"
+                        android:inputType="number"
+                        android:textColor="#000"
+                        android:id="@+id/edtDis" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/spnCate"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@+id/edt24"
+                        android:entries="@array/food"/>
+
+                <Button
+                    android:id="@+id/uploadbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spnCate"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/btn_design"
+                    android:textColor="#fff"
+                    android:ems="9"
+                    android:text="Submit"/>
+                <Button
+                    android:id="@+id/showuploadsbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_below="@+id/spnCate"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="My Items"
+                    android:ems="9"
+                    android:background="@drawable/btn_design"
+                    android:textColor="#fff" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

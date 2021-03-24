@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/chatLayout"
+    android:layout_margin="2dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/othersLayoutText"
+        android:background="@drawable/chat">
+        <TextView
+            android:id="@+id/tvOtherMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="14sp"
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/tvOtherMsgDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvOtherMsg"
+            android:layout_toRightOf="@+id/tvOtherMsg"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="9dp"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myLayoutText"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="@id/othersLayoutText"
+        android:padding="10dp"
+        android:background="@drawable/chat2">
+        <TextView
+            android:id="@+id/tvMyMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#000" />
+        <TextView
+            android:id="@+id/tvMyMsgDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMyMsg"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:textSize="9dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/othersLayout"
+        android:background="@drawable/chat">
+        <ImageView
+            android:id="@+id/othersFilePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/tvOtherDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="@id/othersLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/chat2"
+        android:id="@+id/myLayout">
+        <ImageView
+            android:id="@+id/myFilePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:id="@+id/tvMyDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#000"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

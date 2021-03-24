@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4FAF1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/dealerstoolbarM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="#FFFFFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                app:civ_border="true"
+                app:civ_border_width="0.6dp"
+                app:civ_border_color="#FFFFFF"
+                android:src="@drawable/loading"
+                android:id="@+id/chatProfile"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chatUser"
+                android:layout_toRightOf="@+id/chatProfile"
+                android:textSize="15sp"
+                android:textColor="#FFFFFF"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:text="Awais Khan"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvNoDealersM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:layout_above="@+id/progressBarM"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        tools:ignore="UnknownId" />
+
+    <ListView
+        android:layout_below="@+id/dealerstoolbarM"
+        android:layout_marginTop="8dp"
+        android:id="@+id/listViewDealersM"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/chat_list_select"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/edtChat"
+        android:longClickable="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <EditText
+        android:id="@+id/edtChat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toLeftOf="@+id/rr"
+        android:background="@drawable/edt_chats_design"
+        android:hint="Type message" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_above="@+id/edtChat"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/selectedFile"
+        android:visibility="gone"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtChat"
+        android:layout_marginBottom="17sp"
+        android:layout_marginLeft="31dp"
+        android:id="@+id/loadingProgress"
+        android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="7dp"
+            android:id="@+id/rr"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circle">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imgSubmiit"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/send_message"/>
+        </RelativeLayout>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imgSelect"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:layout_toLeftOf="@+id/rr"
+                android:src="@drawable/insert_pic"/>
+
+</RelativeLayout>

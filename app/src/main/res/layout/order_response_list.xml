@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:elevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="120dp"
+            android:id="@+id/orderDealerPic"
+            android:layout_margin="3dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/loading"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0D4E86"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/orderDealerPic"
+            android:layout_marginLeft="3dp"
+            android:layout_alignParentRight="true"
+            android:text="Food"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_item"
+            android:textColor="#0D4E86"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/orderDealerPic"
+            android:text="Food Seller"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/tv_item"
+            android:layout_marginLeft="3dp"
+            android:textColor="#000"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvdealer"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:text=""
+            android:layout_below="@id/tv_item"
+            android:textColor="#696767"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:layout_marginRight="4dp"
+            android:layout_below="@id/textVquan"
+            android:layout_toRightOf="@+id/orderDealerPic"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#000"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvtotal"
+            android:text=""
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/textVquan"
+            android:layout_alignParentRight="true"
+            android:textColor="#696767"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvdealer"
+            android:layout_toRightOf="@+id/orderDealerPic"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="3dp"
+            android:textSize="13sp"
+            android:textColor="#000"
+            android:text="Price "/>
+
+        <TextView
+            android:id="@+id/textviewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvdealer"
+            android:layout_marginTop="3dp"
+            android:textSize="13sp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#CE1D19"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewPrice"
+            android:layout_toRightOf="@+id/orderDealerPic"
+            android:layout_marginLeft="3dp"
+            android:textSize="13sp"
+            android:layout_marginTop="3dp"
+            android:textColor="#000"
+            android:text="Quantity"/>
+        <TextView
+            android:id="@+id/textVquan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textviewPrice"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true"
+            android:textColor="#696767"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvstatus"
+            android:layout_marginTop="30dp"
+            android:textColor="#0D4E86"
+            android:layout_below="@+id/orderDealerPic"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="20dp"/>
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:layout_width="25dp"
+            app:civ_border="true"
+            app:civ_border_width="0.7dp"
+            app:civ_border_color="#FFFFFF"
+            android:layout_height="25dp"
+            android:id="@+id/rate_items"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/rating_icon"
+            android:layout_below="@+id/orderDealerPic"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvstatus"
+            android:layout_centerHorizontal="true"
+            android:textSize="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dateTime"
+            android:id="@+id/statDate"
+            android:layout_marginLeft="3dp"
+            android:textSize="10dp"
+            android:layout_below="@+id/orderDealerPic"
+            android:layout_marginTop="3dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

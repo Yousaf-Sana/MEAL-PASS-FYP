@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="10dp"
+    android:elevation="5dp"
+    android:id="@+id/cardView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkbox"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/dealerPic"
+                    android:visibility="gone"/>
+
+
+                <ImageView
+                    android:id="@+id/ItemPic"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/loading"
+                    android:scaleType="fitXY"
+                    android:layout_height="140dp" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/dealerPic"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    app:civ_border="true"
+                    app:civ_border_color="#fff"
+                    app:civ_border_width="0.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_below="@+id/ItemPic"
+                    android:src="@drawable/loading"/>
+
+                <TextView
+                    android:id="@+id/dealerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seller name"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_toRightOf="@+id/dealerPic"
+                    android:layout_marginTop="9dp"
+                    android:layout_below="@+id/ItemPic"/>
+
+                <TextView
+                    android:id="@+id/tvItemName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ItemPic"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Item Name"
+                    android:textColor="#0D4E86"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/tvItemName2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_alignParentRight="true"
+                    android:text="Points"
+                    android:textColor="#CE302D"
+                    android:textSize="14sp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvItemPrice2"
+                    android:layout_marginTop="6dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/itemRating2"
+                    android:focusableInTouchMode="false"
+                    android:max="5"
+                    android:progressBackgroundTint="#FAD016"
+                    android:progressTint="#FAD016"
+                    android:stepSize="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    style="?android:attr/ratingBarStyleSmall"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemRating2"
+                    android:textSize="10dp"/>
+        </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
